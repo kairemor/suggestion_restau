@@ -1,0 +1,92 @@
+GET http://localhost:3500/ 
+###
+###
+POST http://localhost:4000/users/signup
+Content-Type: application/json
+
+{
+    "username":"morkaire", 
+    "password":"mamsoum"
+}
+### 
+
+### 
+POST http://localhost:4000/users/login
+Content-Type: application/json
+
+{
+    "username":"lamine",
+    "password":"mamsoum"
+}
+###### 
+POST http://localhost:4000/users/login
+Content-Type: application/json
+
+{
+    "username":"morkaire",
+    "password":"mamsoum"
+}
+###  
+GET  http://localhost:3000/product/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGZhNGE4Y2MzMzc1YTJjYTAwYjA5M2UiLCJpYXQiOjE1NzY2ODQxOTQsImV4cCI6MTU3NjY4NDc5NH0.P5qet0V85fH4wXGk_OxDvIsC0UwIxFtxlwxct13qi2g
+### 
+GET  http://localhost:3000/product/all
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGZhNGE4Y2MzMzc1YTJjYTAwYjA5M2UiLCJpYXQiOjE1NzY2ODQxOTQsImV4cCI6MTU3NjY4NDc5NH0.P5qet0V85fH4wXGk_OxDvIsC0UwIxFtxlwxct13qi2g
+### 
+POST  http://localhost:3000/product/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGZhNGE4Y2MzMzc1YTJjYTAwYjA5M2UiLCJpYXQiOjE1NzY2ODQxOTQsImV4cCI6MTU3NjY4NDc5NH0.P5qet0V85fH4wXGk_OxDvIsC0UwIxFtxlwxct13qi2g
+Content-Type: application/json
+
+{
+    "name":"Ordinateur",
+    "price":"1500000f"
+}
+### 
+GET http://localhost:4000/users/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGZhNGE4Y2MzMzc1YTJjYTAwYjA5M2UiLCJpYXQiOjE1NzY2ODQxOTQsImV4cCI6MTU3NjY4NDc5NH0.P5qet0V85fH4wXGk_OxDvIsC0UwIxFtxlwxct13qi2g
+
+###
+###
+POST http://localhost:3500/repas
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGZhNGE4Y2MzMzc1YTJjYTAwYjA5M2UiLCJpYXQiOjE1Nzg0OTQ3MDksImV4cCI6MTU3ODQ5NTMwOX0.FYpIZw0mZnC3jpc5TFh3bGPGSBJYzwRPmLlAIJqwzXg
+Content-Type: application/json
+
+{
+    "day_number":0,
+    "day":"Dimanche",
+    "repas": "Mamsoum",
+    "diner":"Wadji"
+}
+###
+GET  http://localhost:3500/repas
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGZhNGE4Y2MzMzc1YTJjYTAwYjA5M2UiLCJpYXQiOjE1Nzg0OTQ3MDksImV4cCI6MTU3ODQ5NTMwOX0.FYpIZw0mZnC3jpc5TFh3bGPGSBJYzwRPmLlAIJqwzXg
+###
+GET  http://localhost:3500/suggestion?sex=M&classroom=TC2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGZhNGE4Y2MzMzc1YTJjYTAwYjA5M2UiLCJpYXQiOjE1Nzg0OTQ3MDksImV4cCI6MTU3ODQ5NTMwOX0.FYpIZw0mZnC3jpc5TFh3bGPGSBJYzwRPmLlAIJqwzXg
+###
+POST  http://localhost:3500/suggestion
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGZhNGE4Y2MzMzc1YTJjYTAwYjA5M2UiLCJpYXQiOjE1Nzg0OTQ3MDksImV4cCI6MTU3ODQ5NTMwOX0.FYpIZw0mZnC3jpc5TFh3bGPGSBJYzwRPmLlAIJqwzXg
+Content-Type: application/json
+
+{
+    "classroom":"DIC1",
+    "sex":"male",
+    "suggestion":"Notre suggestion pour la commution resta",
+    "appreciationRepas":"5,bon,mauvais:6,bon,tres-bon"
+}
+###
+GET  http://localhost:3500/suggestion?appreciationRepas=true
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Y2NmMDg4YjFiOWRjZTE3ZGFjZDYyNjUiLCJpYXQiOjE1NzkzNjEyNzksImV4cCI6MTU3OTM2NDg3OX0.nn4YeF6w3uNB4EwRqnWpqN9A0hCZUEGpEq8hxsZ9g4A
+
+### 
+PUT  http://localhost:3500/suggestion/5e232961527d447e3f20d426
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Y2NmMDg4YjFiOWRjZTE3ZGFjZDYyNjUiLCJpYXQiOjE1NzkzNjEyNzksImV4cCI6MTU3OTM2NDg3OX0.nn4YeF6w3uNB4EwRqnWpqN9A0hCZUEGpEq8hxsZ9g4A
+Content-Type: application/json
+
+{
+    "readBy": "5e232961527d447e3f20d426"
+}
+### 
+GET  http://localhost:3500/suggestion?appreciationRepas=true&thisWeek=2019-01-11T10:23:25.410Z&classroom=DIC1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Y2NmMDg4YjFiOWRjZTE3ZGFjZDYyNjUiLCJpYXQiOjE1NzkzNjEyNzksImV4cCI6MTU3OTM2NDg3OX0.nn4YeF6w3uNB4EwRqnWpqN9A0hCZUEGpEq8hxsZ9g4A
+

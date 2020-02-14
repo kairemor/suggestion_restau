@@ -1,12 +1,12 @@
 GET http://localhost:3500/ 
 ###
 ###
-POST http://localhost:4000/users/signup
+POST https://auth-express-km.herokuapp.com/users/signup
 Content-Type: application/json
 
 {
-    "username":"morkaire", 
-    "password":"mamsoum"
+    "username":"khannhadim", 
+    "password":"KhadimHane@"
 }
 ### 
 
@@ -27,13 +27,21 @@ Content-Type: application/json
     "password":"mamsoum"
 }
 ###  
+POST https://auth-express-km.herokuapp.com/users/login
+Content-Type: application/json
+
+{
+    "username":"lamine",
+    "password":"mamsoum"
+}
+###  
 GET  http://localhost:3000/product/
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGZhNGE4Y2MzMzc1YTJjYTAwYjA5M2UiLCJpYXQiOjE1NzY2ODQxOTQsImV4cCI6MTU3NjY4NDc5NH0.P5qet0V85fH4wXGk_OxDvIsC0UwIxFtxlwxct13qi2g
 ### 
 GET  http://localhost:3000/product/all
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGZhNGE4Y2MzMzc1YTJjYTAwYjA5M2UiLCJpYXQiOjE1NzY2ODQxOTQsImV4cCI6MTU3NjY4NDc5NH0.P5qet0V85fH4wXGk_OxDvIsC0UwIxFtxlwxct13qi2g
-### 
-POST  http://localhost:3000/product/
+### http://localhost:3500
+http://localhost:3500POST  http://localhost:3000/product/
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGZhNGE4Y2MzMzc1YTJjYTAwYjA5M2UiLCJpYXQiOjE1NzY2ODQxOTQsImV4cCI6MTU3NjY4NDc5NH0.P5qet0V85fH4wXGk_OxDvIsC0UwIxFtxlwxct13qi2g
 Content-Type: application/json
 
@@ -48,7 +56,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGZhNGE4Y
 ###
 ###
 POST http://localhost:3500/repas
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGZhNGE4Y2MzMzc1YTJjYTAwYjA5M2UiLCJpYXQiOjE1Nzg0OTQ3MDksImV4cCI6MTU3ODQ5NTMwOX0.FYpIZw0mZnC3jpc5TFh3bGPGSBJYzwRPmLlAIJqwzXg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTNjNWVmY2MwMWRiNTE1ODU1M2FmOWMiLCJpYXQiOjE1ODExNzMyMzIsImV4cCI6MTU4MTE3NjgzMn0.CqWwHiRbPlksBW3M6hyl8Yho-oQ5MbmYoATDPnlzvt4
 Content-Type: application/json
 
 {
@@ -58,14 +66,25 @@ Content-Type: application/json
     "diner":"Wadji"
 }
 ###
+POST https://linen-fuze-261912.appspot.com/repas
+Authorization: Bearer eyJhbGiOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTNjNWVmY2MwMWRiNTE1ODU1M2FmOWMiLCJpYXQiOjE1ODExNzMyMzIsImV4cCI6MTU4MTE3NjgzMn0.CqWwHiRbPlksBW3M6hyl8Yho-oQ5MbmYoATDPnlzvt4
+Content-Type: application/json
+
+{
+    "day_number":6,
+    "day":"Samedi",
+    "repas": "Yassa au poisson",
+    "diner":"Poulet roti"
+}
+###
 GET  http://localhost:3500/repas
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGZhNGE4Y2MzMzc1YTJjYTAwYjA5M2UiLCJpYXQiOjE1Nzg0OTQ3MDksImV4cCI6MTU3ODQ5NTMwOX0.FYpIZw0mZnC3jpc5TFh3bGPGSBJYzwRPmLlAIJqwzXg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTNjNWVmY2MwMWRiNTE1ODU1M2FmOWMiLCJpYXQiOjE1ODExNzMyMzIsImV4cCI6MTU4MTE3NjgzMn0.CqWwHiRbPlksBW3M6hyl8Yho-oQ5MbmYoATDPnlzvt4
 ###
 GET  http://localhost:3500/suggestion?sex=M&classroom=TC2
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGZhNGE4Y2MzMzc1YTJjYTAwYjA5M2UiLCJpYXQiOjE1Nzg0OTQ3MDksImV4cCI6MTU3ODQ5NTMwOX0.FYpIZw0mZnC3jpc5TFh3bGPGSBJYzwRPmLlAIJqwzXg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTNjNWVmY2MwMWRiNTE1ODU1M2FmOWMiLCJpYXQiOjE1ODExNzMyMzIsImV4cCI6MTU4MTE3NjgzMn0.CqWwHiRbPlksBW3M6hyl8Yho-oQ5MbmYoATDPnlzvt4
 ###
 POST  http://localhost:3500/suggestion
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGZhNGE4Y2MzMzc1YTJjYTAwYjA5M2UiLCJpYXQiOjE1Nzg0OTQ3MDksImV4cCI6MTU3ODQ5NTMwOX0.FYpIZw0mZnC3jpc5TFh3bGPGSBJYzwRPmLlAIJqwzXg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTNjNWVmY2MwMWRiNTE1ODU1M2FmOWMiLCJpYXQiOjE1ODExNzMyMzIsImV4cCI6MTU4MTE3NjgzMn0.CqWwHiRbPlksBW3M6hyl8Yho-oQ5MbmYoATDPnlzvt4
 Content-Type: application/json
 
 {

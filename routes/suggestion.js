@@ -6,7 +6,6 @@ const Suggestion = require('../models/suggestion');
 
 router.route('')
   .get(authenticate.verifyUser, (req, res, next) => {
-
     let sendAppreciation = false;
     let query = {};
     if (req.query.appreciationRepas) {
@@ -47,7 +46,7 @@ router.route('')
       .catch(err => console.log(err));
   })
   .post((req, res, next) => {
-    let appreciationRepas = req.body.appreciationRepas;
+    let appreciationRepas = req.body.appreciationRepas || '';
     appreciationRepas = appreciationRepas.split(':');
     appreciationRepas = appreciationRepas.map(appreciation => {
       appreciation2 = appreciation.split(',');

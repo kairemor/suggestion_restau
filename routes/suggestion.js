@@ -27,7 +27,9 @@ router.route('')
       delete query.thisWeek;
     }
     console.log(query);
-    Suggestion.find(query)
+    Suggestion.find(query).sort({
+        "createdAt": -1
+      })
       .then(data => {
         if (!sendAppreciation) {
           suggestions = data.map(suggestion => {

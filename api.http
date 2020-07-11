@@ -10,6 +10,15 @@ Content-Type: application/json
 }
 ### 
 
+POST https://auth-express-km.herokuapp.com/users/login
+Content-Type: application/json
+
+{
+    "username":"khannhadim", 
+    "password":"KhadimHane@"
+}
+### 
+
 ### 
 POST http://localhost:4000/users/login
 Content-Type: application/json
@@ -80,8 +89,8 @@ Content-Type: application/json
 GET  http://localhost:3500/repas
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTNjNWVmY2MwMWRiNTE1ODU1M2FmOWMiLCJpYXQiOjE1ODExNzMyMzIsImV4cCI6MTU4MTE3NjgzMn0.CqWwHiRbPlksBW3M6hyl8Yho-oQ5MbmYoATDPnlzvt4
 ###
-GET  http://localhost:3500/suggestion?sex=M&classroom=TC2
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTNjNWVmY2MwMWRiNTE1ODU1M2FmOWMiLCJpYXQiOjE1ODExNzMyMzIsImV4cCI6MTU4MTE3NjgzMn0.CqWwHiRbPlksBW3M6hyl8Yho-oQ5MbmYoATDPnlzvt4
+GET  http://localhost:3500/suggestion
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTNjNWVmY2MwMWRiNTE1ODU1M2FmOWMiLCJpYXQiOjE1ODE2NzI2NzYsImV4cCI6MTU4MTY3NjI3Nn0.QkN90Dz_-oKkcINkZH71iZKlJNm0JR8GnxMaTN_JoZ4
 ###
 POST  http://localhost:3500/suggestion
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTNjNWVmY2MwMWRiNTE1ODU1M2FmOWMiLCJpYXQiOjE1ODExNzMyMzIsImV4cCI6MTU4MTE3NjgzMn0.CqWwHiRbPlksBW3M6hyl8Yho-oQ5MbmYoATDPnlzvt4
@@ -95,11 +104,11 @@ Content-Type: application/json
 }
 ###
 GET  http://localhost:3500/suggestion?appreciationRepas=true
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Y2NmMDg4YjFiOWRjZTE3ZGFjZDYyNjUiLCJpYXQiOjE1NzkzNjEyNzksImV4cCI6MTU3OTM2NDg3OX0.nn4YeF6w3uNB4EwRqnWpqN9A0hCZUEGpEq8hxsZ9g4A
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTNjNWVmY2MwMWRiNTE1ODU1M2FmOWMiLCJpYXQiOjE1ODE2NzI2NzYsImV4cCI6MTU4MTY3NjI3Nn0.QkN90Dz_-oKkcINkZH71iZKlJNm0JR8GnxMaTN_JoZ4
 
 ### 
 PUT  http://localhost:3500/suggestion/5e232961527d447e3f20d426
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Y2NmMDg4YjFiOWRjZTE3ZGFjZDYyNjUiLCJpYXQiOjE1NzkzNjEyNzksImV4cCI6MTU3OTM2NDg3OX0.nn4YeF6w3uNB4EwRqnWpqN9A0hCZUEGpEq8hxsZ9g4A
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTNlY2NhOWMwN2ExZTAwMTc5MmVmOTYiLCJpYXQiOjE1OTQ1MDA3MTEsImV4cCI6MTU5NDUwNDMxMX0.aQyg_wtrU56jWhEWms_awOlxnhoV7fNE8FJYWMRfhMQ
 Content-Type: application/json
 
 {
@@ -107,5 +116,27 @@ Content-Type: application/json
 }
 ### 
 GET  http://localhost:3500/suggestion?appreciationRepas=true&thisWeek=2019-01-11T10:23:25.410Z&classroom=DIC1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Y2NmMDg4YjFiOWRjZTE3ZGFjZDYyNjUiLCJpYXQiOjE1NzkzNjEyNzksImV4cCI6MTU3OTM2NDg3OX0.nn4YeF6w3uNB4EwRqnWpqN9A0hCZUEGpEq8hxsZ9g4A
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTNlY2NhOWMwN2ExZTAwMTc5MmVmOTYiLCJpYXQiOjE1OTQ1MDA3MTEsImV4cCI6MTU5NDUwNDMxMX0.aQyg_wtrU56jWhEWms_awOlxnhoV7fNE8FJYWMRfhMQ
 
+### 
+POST  http://localhost:3500/blouson
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTNlY2NhOWMwN2ExZTAwMTc5MmVmOTYiLCJpYXQiOjE1OTQ1MDA3MTEsImV4cCI6MTU5NDUwNDMxMX0.aQyg_wtrU56jWhEWms_awOlxnhoV7fNE8FJYWMRfhMQ
+Content-Type: application/json
+
+{
+    "first_name": "Mor",
+    "last_name": "Kaire",
+    "classroom": "DIC2",
+    "phone_number": "773245423",
+    "shoulder": "100.2",
+    "shatf": "122",
+    "chest": "23",
+    "buttock": "12",
+    "pantaloons": "103",
+    "choice": "blouson + debardeur"
+}
+### 
+GET  http://localhost:3500/blouson
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTNlY2NhOWMwN2ExZTAwMTc5MmVmOTYiLCJpYXQiOjE1OTQ1MDA3MTEsImV4cCI6MTU5NDUwNDMxMX0.aQyg_wtrU56jWhEWms_awOlxnhoV7fNE8FJYWMRfhMQ
+
+### 

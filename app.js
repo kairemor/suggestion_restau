@@ -8,6 +8,7 @@ const cors = require('cors')();
 const indexRouter = require('./routes/index');
 const suggestionRouter = require('./routes/suggestion');
 const repasRouter = require('./routes/repas');
+const blousonRouter = require('./routes/blouson');
 const url = require('./config/config').mongoUrl;
 
 const app = express();
@@ -29,6 +30,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/suggestion', suggestionRouter);
 app.use('/repas', repasRouter);
+app.use('/blouson', blousonRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
